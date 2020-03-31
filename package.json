@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "unwrap-jsonp",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Unwrap the values in a JSONP function.",
+	"repository": "https://github.com/Richienb/unwrap-jsonp.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,7 +17,15 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
+	"keywords": [
+		"jsonp",
+		"unwrap",
+		"get",
+		"parse",
+		"process",
+		"json",
+		"arguments"
+	],
 	"dependencies": {},
 	"devDependencies": {
 		"ava": "^3.5.2",

@@ -1,41 +1,44 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# unwrap-jsonp [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/unwrap-jsonp/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/unwrap-jsonp)
 
-My awesome module.
+Unwrap the values in a JSONP function.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/unwrap-jsonp.png)](https://npmjs.com/package/unwrap-jsonp)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install unwrap-jsonp
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const unwrapJsonp = require("unwrap-jsonp")
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+unwrapJsonp(`fn({a: "b"})`)
+//=> {a: "b"}
+
+unwrapJsonp(`fn("a", "b")`, {multiArgs: true})
+//=> ["a", "b"]
 ```
 
 ## API
 
-### theModule(input, options?)
+### unwrapJsonp(data, options?)
 
-#### input
+#### data
 
 Type: `string`
 
-Lorem ipsum.
+The jsonp to parse.
 
 #### options
 
 Type: `object`
 
-##### postfix
+##### multiArgs
 
-Type: `string`\
-Default: `rainbows`
+Type: `boolean`\
+Default: `false`
 
-Lorem ipsum.
+Return an array of the function arguments instead of just the first one.
